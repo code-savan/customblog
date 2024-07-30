@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { signIn } from "next-auth/react";
 import Input from "@/components/shared/Input"
 import PasswordInput from "@/components/shared/PasswordInput"
+import Image from "next/image";
 
 const Login = () => {
   const [loading, setLoading] = useState(false);
@@ -63,10 +64,12 @@ const Login = () => {
   return (
     <section className="flex w-full h-[100dvh] m-0">
       <div className="h-[100dvh] w-[50%]">
-        <img
+        <Image
           alt="image"
           src="/bg1.jpg"
           className="h-full w-full object-cover"
+          width={400}
+          height={400}
         />
       </div>
 
@@ -117,11 +120,8 @@ const Login = () => {
             </div>
 
             <div className=" text-slate-900 font-medium text-[12px] text-center">
-              <span>Don't have an account?</span>
-              <a
-                href="/sign-up"
-                className="text-[#5D7DF3] pl-3 text-[12px]"
-              >
+              <span>Don&apos;t have an account?</span>
+              <a href="/sign-up" className="text-[#5D7DF3] pl-3 text-[12px]">
                 Create an account
               </a>
             </div>

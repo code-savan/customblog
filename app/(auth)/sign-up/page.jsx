@@ -61,10 +61,12 @@ const Signup = () => {
   return (
     <section className="flex w-full h-[100dvh] m-0">
       <div className="h-[100dvh] w-[50%]">
-        <img
+        <Image
           alt="image"
           src="/bg1.jpg"
           className="h-full w-full object-cover"
+          width={400}
+          height={400}
         />
       </div>
 
