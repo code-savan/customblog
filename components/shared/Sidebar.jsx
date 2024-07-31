@@ -1,4 +1,4 @@
-// import { signOut } from "next-auth/react";
+import { signOut } from "next-auth/react";
 import Image from "next/image";
 import React from "react";
 
@@ -24,7 +24,7 @@ const Sidebar = () => {
 
         <div
           className="flex pl-[50px] space-x-3 items-center cursor-pointer hover:bg-zinc-800 transition py-3"
-          // onClick={signOut}
+          onClick={() => signOut()}
         >
           <Image
             src={"/circle-help.png"}
