@@ -96,9 +96,14 @@
 
 
 
+import { connect } from "@/utils/config/dbConfig";
+import User from "@/utils/models/auth";
+import NextAuth from "next-auth";
+import CredentialsProvider from "next-auth/providers/credentials";
+import GoogleProvider from "next-auth/providers/google";
+import bcryptjs from "bcryptjs";
 
-
-export default NextAuth({
+const authOptions = {
   providers: [
     CredentialsProvider({
       name: "credentials",
@@ -180,4 +185,8 @@ export default NextAuth({
   pages: {
     signIn: "/",
   },
-});
+};
+
+const handler = NextAuth(authOptions);
+
+export { handler as GET, handler as POST };
