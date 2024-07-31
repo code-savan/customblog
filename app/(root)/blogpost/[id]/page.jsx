@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Header from "@/components/shared/Header";
+import Loader from "@/components/shared/Loader";
 import axios from "axios";
 import Image from "next/image";
 
@@ -30,7 +31,7 @@ const BlogPost = ({ params }) => {
   }, [params.id]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <Loader />;
   }
 
   if (error) {

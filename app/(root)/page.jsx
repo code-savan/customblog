@@ -2,6 +2,7 @@
 import Header from '@/components/shared/Header'
 import React from 'react'
 import BlogCard from "@/components/shared/BlogCard";
+import Loader from "@/components/shared/Loader";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -27,7 +28,7 @@ const Home = () => {
      fetchBlogs();
    }, []);
   
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <Loader />;
   if (error) return <div>Error: {error}</div>;
   
   return (
